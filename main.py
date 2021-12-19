@@ -2,12 +2,14 @@ import re
 
 def reg():
     reg_email = input("Enter your email ID")
-    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    regex = r'\b[^0-9!@#$%^&*][A-Za-z0-9.x]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 
     if (re.fullmatch(regex, reg_email)):
         print("Valid Email")
         flag = 0
         passwd = input("Enter your password")
+
+
 
         if not re.search('[a-z]', passwd):
             flag = 1
